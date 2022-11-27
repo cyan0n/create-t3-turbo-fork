@@ -1,4 +1,11 @@
 {
   "extends": "@acme/tsconfig/nextjs.json",
-  "include": ["node_modules/@acme/auth/next-auth.d.ts"]
+  "include": [
+    "node_modules/@acme/auth/next-auth.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs"
+  ]
 }
