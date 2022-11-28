@@ -14,6 +14,7 @@
     "type-check": "turbo type-check"
   },
   "dependencies": {
+    "@acme/eslint-config-base": "*",
     "@manypkg/cli": "^0.19.2",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
