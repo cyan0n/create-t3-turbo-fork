@@ -6,7 +6,7 @@ interface ButtonProps {
 
 export const Button = ({ children }: ButtonProps) => {
   return (
-    <button className="rounded-md bg-pink-500 p-2 font-bold">
+    <button className="btn btn-primary">
       {children ? children : "Hello from UI"}
     </button>
   );
