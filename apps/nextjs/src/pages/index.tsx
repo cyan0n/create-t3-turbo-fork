@@ -71,7 +71,9 @@ const AuthShowcase: React.FC = () => {
           {secretMessage && <span> - {secretMessage}</span>}
         </p>
       )}
-      <Button />
+      <Button intent="warning" size="small">
+        Hello from CVA + DaisyUI
+      </Button>
       <button
         className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
         onClick={session ? () => signOut() : () => signIn()}

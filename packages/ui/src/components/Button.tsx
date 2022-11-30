@@ -1,13 +1,39 @@
 import * as React from "react";
+import { cva, VariantProps } from "class-variance-authority";
 
-interface ButtonProps {
-  children?: React.ReactNode;
-}
+const variants = cva(["btn"], {
+  variants: {
+    intent: { primary: "btn-primary", warning: "btn-warning" },
+    size: { small: "btn-sm", medium: "btn-md" },
+    loading: {
+      true: "loading",
+    },
+  },
+  defaultVariants: {
+    intent: "primary",
+    size: "medium",
+  },
+});
 
-export const Button = ({ children }: ButtonProps) => {
+interface ButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof variants> {}
+
+export const Button = ({
+  className,
+  children,
+  intent,
+  size,
+  loading,
+  ...props
+}: ButtonProps) => {
   return (
-    <button className="btn btn-primary">
-      {children ? children : "Hello from UI"}
+    <button
+      className={variants({ class: className, intent, size, loading })}
+      disabled={!!loading}
+      {...props}
+    >
+      {children}
     </button>
   );
 };
