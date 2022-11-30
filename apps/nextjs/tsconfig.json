@@ -1,12 +1,12 @@
 {
-  "extends": "../../tsconfig.json",
-  "exclude": [],
+  "extends": "@acme/tsconfig/nextjs.json",
   "include": [
-    "next-env.d.ts",
     "node_modules/@acme/auth/next-auth.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.mjs"
+    "**/*.mjs",
+    "tailwind.config.js"
   ]
 }

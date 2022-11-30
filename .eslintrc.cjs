@@ -1,15 +1,11 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: [
-      "./tsconfig.json",
-      "./apps/*/tsconfig.json",
-      "./packages/*/tsconfig.json",
-    ],
+  // This tells ESLint to load the config from the package `eslint-config-custom`
+  extends: ["base"],
+  settings: {
+    next: {
+      rootDir: ["apps/*/"],
+    },
   },
-  plugins: ["@typescript-eslint"],
-  extends: ["plugin:@typescript-eslint/recommended"],
 };

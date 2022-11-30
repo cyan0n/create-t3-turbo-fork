@@ -14,6 +14,7 @@
     "@acme/api": "*",
     "@acme/auth": "*",
     "@acme/db": "*",
+    "@acme/ui": "*",
     "@acme/tailwind-config": "*",
     "@tanstack/react-query": "^4.16.1",
     "@trpc/client": "10.0.0-rc.4",
@@ -27,6 +28,8 @@
     "zod": "^3.18.0"
   },
   "devDependencies": {
+    "@acme/tsconfig": "*",
+    "@acme/eslint-config-base": "*",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
